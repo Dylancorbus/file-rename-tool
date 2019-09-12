@@ -1,2 +1,33 @@
-# file-rename-tool
-Use this script when copying windows backup files into a mac, to remove a UTC timestamp inserted from a windows backup. from all files in a directory and its sub directories
+# File-Rename-Tool
+
+**Why I made this?**
+
+I used to have a windows laptop, i proceeded to use the windows backup software included in windows os, to back up my pc.
+Apparently when running a windows backup, a timestamp gets appended to the name of every file that is being backed up. for example:
+Original files:
+```
+.gitignore
+Endpoints.txt
+Readme.md
+package-lock.json
+```
+Backed Up files
+```
+(2019_06_24 05_40_08 UTC).gitignore
+Endpoints (2019_06_24 05_40_08 UTC).txt
+Readme (2019_06_24 05_40_08 UTC).md
+package-lock (2019_06_24 05_40_08 UTC).json
+```
+
+This script will fix all the files in a provided directory.
+
+to run this script just install python and run this command:
+
+```
+python rename.py 'absolute/path/to/the/directory/containing/the/files/with/timestamps'
+```
+
+when i used it:
+```
+python rename.py '/Users/dylancorbus/Desktop/test'
+```
